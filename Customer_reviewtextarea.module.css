@@ -1,0 +1,44 @@
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* full page center */
+  background: linear-gradient(135deg, #17252A, #3AAFA9, #2B787A);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reviewTextarea {
+  width: 400px;
+  height: 150px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  color: #17252A;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.reviewTextarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.submitBtn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #3AAFA9, #985E6D);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #985E6D, #3AAFA9);
+}

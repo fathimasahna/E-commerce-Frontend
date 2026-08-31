@@ -1,0 +1,33 @@
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin: 200px auto;
+}
+
+thead {
+  background: linear-gradient(135deg,#494E6B,#985E6D,#434860);
+  color: white;
+}
+
+th, td {
+  padding: 14px 18px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+  background: #f1f1f1;
+  transform: scale(1.01);
+}
+tbody{
+    text-align: center;
+}

@@ -1,0 +1,457 @@
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.pageContainer {
+  min-height: 100vh;
+  padding: 45px 6%;
+
+  background: #f7f5f6;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+}
+
+
+.smallTitle {
+  margin: 0 0 8px;
+
+  color: #985e6d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.pageHeader h2 {
+  margin: 0;
+
+  color: #272b3d;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+
+.subtitle {
+  margin: 8px 0 0;
+
+  color: #777;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   PRODUCT COUNT
+========================================= */
+
+.productCount {
+  min-width: 150px;
+
+  padding: 16px 20px;
+
+  background: white;
+
+  border: 1px solid #eee;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(39, 43, 61, 0.07);
+
+  text-align: center;
+}
+
+
+.productCount span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+.productCount strong {
+  color: #985e6d;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.tableContainer {
+  width: 100%;
+
+  background: white;
+
+  border-radius: 16px;
+
+  overflow-x: auto;
+
+  box-shadow: 0 8px 30px rgba(39, 43, 61, 0.08);
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.productsTable {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 650px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.productsTable thead {
+  background: #272b3d;
+}
+
+
+.productsTable th {
+  padding: 17px 20px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.productsTable td {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #eee;
+
+  color: #444;
+
+  font-size: 14px;
+}
+
+
+.productsTable tbody tr {
+  transition: background 0.2s ease;
+}
+
+
+.productsTable tbody tr:hover {
+  background: #faf6f7;
+}
+
+
+.productsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   PRODUCT DATA
+========================================= */
+
+.productId {
+  color: #985e6d !important;
+
+  font-weight: 600;
+}
+
+
+.productName {
+  color: #272b3d !important;
+
+  font-weight: 600;
+}
+
+
+.price {
+  color: #272b3d !important;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   STOCK
+========================================= */
+
+.stockAvailable,
+.stockEmpty {
+  display: inline-block;
+
+  min-width: 45px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.stockAvailable {
+  background: #eee7e9;
+
+  color: #985e6d;
+}
+
+
+.stockEmpty {
+  background: #f2eeee;
+
+  color: #777;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.actions button {
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+/* Edit */
+
+.editButton {
+  background: #272b3d;
+
+  color: white;
+}
+
+
+.editButton:hover {
+  opacity: 0.88;
+
+  transform: translateY(-1px);
+}
+
+
+/* Delete */
+
+.deleteButton {
+  background: #985e6d;
+
+  color: white;
+}
+
+
+.deleteButton:hover {
+  opacity: 0.88;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.emptyState {
+  margin-top: 25px;
+
+  padding: 50px 20px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 30px rgba(39, 43, 61, 0.06);
+}
+
+
+.emptyState h3 {
+  margin: 0 0 8px;
+
+  color: #272b3d;
+
+  font-size: 20px;
+}
+
+
+.emptyState p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .pageContainer {
+    padding: 35px 4%;
+  }
+
+
+  .pageHeader h2 {
+    font-size: 30px;
+  }
+
+
+  .productCount {
+    min-width: 130px;
+  }
+
+
+  .productsTable th,
+  .productsTable td {
+    padding: 15px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .pageContainer {
+    padding: 25px 15px;
+  }
+
+
+  .pageHeader {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+
+  .pageHeader h2 {
+    font-size: 26px;
+  }
+
+
+  .subtitle {
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  .productCount {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  /*
+     Instead of allowing the table
+     to break the phone layout,
+     make the table scroll horizontally.
+  */
+
+  .tableContainer {
+    border-radius: 12px;
+
+    overflow-x: auto;
+  }
+
+
+  .productsTable {
+    min-width: 600px;
+  }
+
+
+  .productsTable th,
+  .productsTable td {
+    padding: 13px 12px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .pageContainer {
+    padding: 20px 12px;
+  }
+
+
+  .pageHeader h2 {
+    font-size: 23px;
+  }
+
+
+  .smallTitle {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+}

@@ -1,0 +1,41 @@
+/* Public_navbar.module.css */
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* space between title and links */
+  align-items: center;
+  background-color: #1f2937; /* dark slate background */
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  height:50px;
+}
+
+.nav h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.nav h4:hover{
+    color: #3b82f6;
+}
+
+.nav a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+  color: #3b82f6; /* blue accent on hover */
+ 
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    
+}

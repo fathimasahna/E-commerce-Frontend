@@ -1,0 +1,236 @@
+/* =========================
+   MAIN PAGE
+========================= */
+
+.publicReviewPage {
+  min-height: calc(100vh - 70px);
+
+  background-color: #f3f4f6;
+
+  padding: 50px 6%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.publicReviewHeader {
+  max-width: 1200px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.publicReviewHeader h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.publicReviewHeader p {
+  margin-top: 10px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.publicProductGrid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.publicProductCard {
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.publicProductCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.publicProductImage {
+  height: 190px;
+
+  background-color: #eef0f3;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+.publicProductDetails {
+  padding: 20px;
+}
+
+.publicProductDetails h2 {
+  margin: 0 0 12px;
+
+  color: #172033;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.publicProductPrice {
+  margin: 0 0 18px;
+
+  color: #172033;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   VIEW REVIEW BUTTON
+========================= */
+
+.publicReviewButton {
+  width: 100%;
+
+  padding: 12px 15px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background-color: #172033;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.publicReviewButton:hover {
+  background-color: #263653;
+}
+
+.publicReviewButton:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .publicProductGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 750px) {
+  .publicReviewPage {
+    padding: 40px 4%;
+  }
+
+  .publicProductGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .publicReviewPage {
+    padding: 30px 15px;
+  }
+
+  .publicReviewHeader h1 {
+    font-size: 26px;
+  }
+
+  .publicReviewHeader p {
+    font-size: 14px;
+  }
+
+  .publicProductGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .publicProductImage {
+    height: 210px;
+  }
+}

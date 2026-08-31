@@ -1,0 +1,61 @@
+/* ProdUpdate.module.css */
+
+.outt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #192231;
+}
+
+.boxs {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.boxs:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #192231, #0078d7);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #0078d7, #192231);
+}

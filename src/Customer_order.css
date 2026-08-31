@@ -1,0 +1,116 @@
+```css id="c7x2qa"
+.customerOrderPage {
+  min-height: calc(100vh - 70px);
+  background-color: #f5f6f8;
+  padding: 40px 6%;
+}
+
+/* Table */
+
+.table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+.head {
+  background-color: #f8f9fa;
+}
+
+.head th {
+  padding: 17px 20px;
+  text-align: left;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+/* Body */
+
+.body td {
+  padding: 18px 20px;
+  color: #4b5563;
+  font-size: 14px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.body tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover */
+
+.body tr:hover {
+  background-color: #fafafa;
+}
+
+/* Order ID */
+
+.body td:first-child {
+  color: #222222;
+  font-weight: 600;
+}
+
+/* Status */
+
+.body td:nth-child(4) {
+  font-weight: 600;
+}
+
+/* Remove old HTML border */
+
+.table,
+.table th,
+.table td {
+  border-left: none;
+  border-right: none;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .customerOrderPage {
+    padding: 25px 15px;
+  }
+
+  .table {
+    margin: 25px auto;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .head th,
+  .body td {
+    padding: 14px 16px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 500px) {
+  .table {
+    font-size: 13px;
+  }
+
+  .head th {
+    font-size: 13px;
+  }
+
+  .body td {
+    font-size: 13px;
+  }
+}
+

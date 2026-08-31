@@ -1,0 +1,448 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+
+  background: #272b3d;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+
+  position: relative;
+  z-index: 1000;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   ADMIN LOGO
+================================ */
+
+.admin {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: white;
+
+  flex-shrink: 0;
+}
+
+.admin h1 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #985e6d;
+}
+
+.adminIcon {
+  font-size: 30px !important;
+  color: white;
+}
+
+
+/* ================================
+   DESKTOP NAVIGATION
+================================ */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  height: 100%;
+}
+
+
+/* ================================
+   NORMAL NAV LINKS
+================================ */
+
+.navLink {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  padding: 10px 14px;
+
+  border-radius: 6px;
+
+  transition: 0.25s ease;
+}
+
+.navLink:hover {
+  background: #985e6d;
+}
+
+
+/* ================================
+   DROPDOWN
+================================ */
+
+.dropdown {
+  position: relative;
+}
+
+
+/* Dropdown Button */
+
+.dropbtn {
+  border: none;
+  outline: none;
+
+  background: #985e6d;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  transition: 0.25s ease;
+}
+
+.dropbtn:hover {
+  background: #a96a79;
+}
+
+
+/* Arrow */
+
+.arrow {
+  font-size: 10px;
+}
+
+
+/* ================================
+   DROPDOWN CONTENT
+================================ */
+
+.dropdownContent {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  min-width: 170px;
+
+  background: white;
+
+  border-radius: 7px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+
+  animation: dropdownAnimation 0.2s ease;
+}
+
+
+@keyframes dropdownAnimation {
+
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+.dropdownContent a {
+  display: block;
+
+  padding: 12px 16px;
+
+  color: #272b3d;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.dropdownContent a:hover {
+  background: #f4e9ec;
+  color: #985e6d;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+.btn {
+  border: none;
+  outline: none;
+
+  background: #985e6d;
+  color: white;
+
+  padding: 10px 17px;
+
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: #a96a79;
+}
+
+
+/* ================================
+   HAMBURGER
+================================ */
+
+.menuButton {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  padding: 7px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+.menuButton span {
+  display: block;
+
+  width: 25px;
+  height: 3px;
+
+  background: white;
+
+  border-radius: 5px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    min-height: 65px;
+    padding: 0 25px;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .main {
+    display: none;
+
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    background: #272b3d;
+
+    padding: 15px 25px 20px;
+
+    box-sizing: border-box;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 7px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+
+  /* Open hamburger menu */
+
+  .mobileMenuOpen {
+    display: flex;
+  }
+
+
+  /* Mobile links */
+
+  .navLink {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border-radius: 6px;
+  }
+
+
+  /* Dropdown */
+
+  .dropdown {
+    width: 100%;
+  }
+
+
+  .dropbtn {
+    width: 100%;
+
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+  }
+
+
+  /* Dropdown inside mobile menu */
+
+  .dropdownContent {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    box-sizing: border-box;
+
+    box-shadow: none;
+
+    border-radius: 6px;
+  }
+
+
+  .dropdownContent a {
+    padding: 11px 18px;
+  }
+
+
+  /* Logout */
+
+  .btn {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 12px;
+  }
+
+}
+
+
+/* ==================================================
+   PHONE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    min-height: 60px;
+
+    padding: 0 16px;
+  }
+
+
+  .admin h1 {
+    font-size: 22px;
+  }
+
+
+  .adminIcon {
+    font-size: 27px !important;
+  }
+
+
+  .menuButton {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .main {
+    top: 60px;
+
+    padding: 12px 16px 18px;
+  }
+
+
+  .navLink,
+  .dropbtn,
+  .btn {
+    font-size: 14px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 380px) {
+
+  .navbar {
+    padding: 0 12px;
+  }
+
+
+  .admin h1 {
+    font-size: 20px;
+  }
+
+
+  .adminIcon {
+    font-size: 25px !important;
+  }
+
+
+  .main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+}

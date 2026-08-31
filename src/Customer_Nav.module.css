@@ -1,0 +1,574 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.outer {
+  width: 100%;
+
+  min-height: 70px;
+
+  padding: 0 6%;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  position: relative;
+
+  z-index: 1000;
+
+  background: #272b3d;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+  flex-shrink: 0;
+}
+
+
+.brand h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+
+.brand h2::after {
+  content: "";
+
+  display: block;
+
+  width: 25px;
+
+  height: 3px;
+
+  margin-top: 4px;
+
+  background: #985e6d;
+
+  border-radius: 5px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+.links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.links a {
+  position: relative;
+
+  padding: 8px 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+
+.links a:hover {
+  color: white;
+}
+
+
+/* Underline animation */
+
+.links > a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 2px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #985e6d;
+
+  border-radius: 5px;
+
+  transition: width 0.25s ease;
+}
+
+
+.links > a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   COMPLAINT DROPDOWN
+========================================= */
+
+.dropdown {
+  position: relative;
+}
+
+
+.dropbtn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+
+.dropbtn:hover {
+  color: white;
+}
+
+
+.arrow {
+  color: #985e6d;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   DROPDOWN CONTENT
+========================================= */
+
+.dropdownContent {
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  min-width: 180px;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+
+  animation: dropdownAnimation 0.2s ease;
+}
+
+
+@keyframes dropdownAnimation {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(0);
+  }
+
+}
+
+
+.dropdownContent a {
+  display: block;
+
+  padding: 11px 13px;
+
+  border-radius: 7px;
+
+  color: #272b3d;
+
+  font-size: 13px;
+
+  text-decoration: none;
+}
+
+
+.dropdownContent a:hover {
+  background: #f4e9ec;
+
+  color: #985e6d;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.cusBtn {
+  padding: 9px 18px;
+
+  border: 1px solid #985e6d;
+
+  border-radius: 7px;
+
+  background: #985e6d;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.cusBtn:hover {
+  background: #a96a79;
+
+  border-color: #a96a79;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 18px rgba(152, 94, 109, 0.3);
+}
+
+
+/* =========================================
+   HAMBURGER
+========================================= */
+
+.menuButton {
+  display: none;
+
+  width: 42px;
+
+  height: 42px;
+
+  padding: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+.menuButton span {
+  display: block;
+
+  width: 21px;
+
+  height: 2px;
+
+  background: white;
+
+  border-radius: 5px;
+
+  transition: all 0.25s ease;
+}
+
+
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: #985e6d;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .outer {
+    padding: 0 4%;
+  }
+
+
+  .navigation {
+    gap: 18px;
+  }
+
+
+  .links {
+    gap: 16px;
+  }
+
+
+  .links a,
+  .dropbtn {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+@media (max-width: 750px) {
+
+  .outer {
+    min-height: 65px;
+
+    padding: 0 20px;
+  }
+
+
+  /* Show hamburger */
+
+  .menuButton {
+    display: flex;
+  }
+
+
+  /* Hide normal navigation */
+
+  .navigation {
+    display: none;
+
+    position: absolute;
+
+    top: 65px;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 15px;
+
+    background: #272b3d;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+
+  /* Open menu */
+
+  .navigationOpen {
+    display: flex;
+
+    animation: mobileMenu 0.2s ease;
+  }
+
+
+  @keyframes mobileMenu {
+
+    from {
+      opacity: 0;
+
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+  }
+
+
+  .links {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 3px;
+
+    width: 100%;
+  }
+
+
+  .links > a,
+  .dropbtn {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 12px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+  }
+
+
+  .links > a:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+
+  .links > a::after {
+    display: none;
+  }
+
+
+  /* Complaint */
+
+  .dropdown {
+    width: 100%;
+  }
+
+
+  .dropbtn {
+    justify-content: space-between;
+  }
+
+
+  /* Mobile dropdown */
+
+  .dropdownContent {
+    position: static;
+
+    transform: none;
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 3px;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    animation: none;
+  }
+
+
+  .dropdownContent a {
+    color: rgba(255, 255, 255, 0.75);
+
+    padding: 11px 13px;
+  }
+
+
+  .dropdownContent a:hover {
+    background: rgba(152, 94, 109, 0.2);
+
+    color: white;
+  }
+
+
+  /* Logout */
+
+  .cusBtn {
+    width: 100%;
+
+    padding: 12px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .outer {
+    padding: 0 15px;
+  }
+
+
+  .brand h2 {
+    font-size: 20px;
+  }
+
+
+  .menuButton {
+    width: 39px;
+
+    height: 39px;
+  }
+
+}

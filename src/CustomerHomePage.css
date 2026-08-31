@@ -1,0 +1,525 @@
+/* =========================================
+   CUSTOMER PAGE
+========================================= */
+
+.customerPage {
+  min-height: 100vh;
+  background: #f7f5f6;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.customerNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.customerhome_outer {
+  min-height: calc(100vh - 70px);
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 70px 8%;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(152, 94, 109, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #272b3d 0%,
+      #30354a 55%,
+      #272b3d 100%
+    );
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.customerhome_outer::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border: 1px solid rgba(152, 94, 109, 0.3);
+
+  border-radius: 50%;
+
+  right: -150px;
+  top: -150px;
+}
+
+
+.customerhome_outer::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  left: -120px;
+  bottom: -120px;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.customerHeroContent {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+}
+
+
+.customerLabel {
+  margin: 0 0 18px;
+
+  color: #985e6d;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.customerH1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+}
+
+
+.customerH1 span {
+  display: block;
+
+  color: #985e6d;
+}
+
+
+.customerHeroText {
+  max-width: 550px;
+
+  margin: 25px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.customerHeroButtons {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+
+.customerPrimaryBtn,
+.customerSecondaryBtn {
+  padding: 13px 24px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+/* Primary */
+
+.customerPrimaryBtn {
+  border: 1px solid #985e6d;
+
+  background: #985e6d;
+
+  color: white;
+}
+
+
+.customerPrimaryBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(152, 94, 109, 0.3);
+}
+
+
+/* Secondary */
+
+.customerSecondaryBtn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: transparent;
+
+  color: white;
+}
+
+
+.customerSecondaryBtn:hover {
+  border-color: #985e6d;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================
+   VISUAL
+========================================= */
+
+.customerHeroVisual {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.customerProductCard {
+  width: 100%;
+
+  max-width: 380px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  transform: rotate(2deg);
+
+  transition: transform 0.3s ease;
+}
+
+
+.customerProductCard:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.customerCardImage {
+  height: 240px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: flex-end;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(152, 94, 109, 0.8),
+      rgba(39, 43, 61, 0.95)
+    );
+}
+
+
+.customerCardImage span {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: white;
+
+  color: #272b3d;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CARD DETAILS
+========================================= */
+
+.customerCardDetails {
+  padding: 25px;
+}
+
+
+.customerCardDetails p {
+  margin: 0 0 10px;
+
+  color: #985e6d;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.customerCardDetails h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 25px;
+
+  line-height: 1.3;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CARD BOTTOM
+========================================= */
+
+.customerCardBottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 25px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.customerCardBottom strong {
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 12px;
+}
+
+
+.customerCardBottom span {
+  color: #985e6d;
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .customerhome_outer {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding: 60px 7%;
+
+    text-align: center;
+  }
+
+
+  .customerHeroContent {
+    max-width: 700px;
+
+    margin: auto;
+  }
+
+
+  .customerHeroText {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .customerHeroButtons {
+    justify-content: center;
+  }
+
+
+  .customerHeroVisual {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .customerhome_outer {
+    min-height: calc(100vh - 60px);
+
+    padding: 45px 20px 60px;
+
+    gap: 40px;
+  }
+
+
+  .customerLabel {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .customerH1 {
+    font-size: 41px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .customerHeroText {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .customerHeroButtons {
+    flex-direction: column;
+
+    width: 100%;
+
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .customerPrimaryBtn,
+  .customerSecondaryBtn {
+    width: 100%;
+  }
+
+
+  .customerProductCard {
+    max-width: 340px;
+
+    transform: none;
+  }
+
+
+  .customerCardImage {
+    height: 200px;
+  }
+
+
+  .customerCardDetails h3 {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .customerhome_outer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .customerH1 {
+    font-size: 34px;
+  }
+
+
+  .customerHeroText {
+    font-size: 13px;
+  }
+
+
+  .customerProductCard {
+    max-width: 310px;
+  }
+
+
+  .customerCardImage {
+    height: 175px;
+  }
+
+}

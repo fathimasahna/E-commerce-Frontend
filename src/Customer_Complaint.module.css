@@ -1,0 +1,151 @@
+.outer {
+  min-height: calc(100vh - 70px);
+  background-color: #f5f6f8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* Page Heading */
+
+.outer h2 {
+  margin: 45px 0 25px;
+
+  color: #1f2937;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+/* Complaint Card */
+
+.inner {
+  width: 100%;
+  max-width: 650px;
+
+  background-color: #ffffff;
+
+  padding: 35px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+}
+
+/* Textarea */
+
+.inner textarea {
+  width: 100%;
+  min-height: 220px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+
+  background-color: #ffffff;
+
+  color: #222222;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+
+  resize: vertical;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.inner textarea::placeholder {
+  color: #9ca3af;
+}
+
+.inner textarea:focus {
+  border-color: #374151;
+
+  box-shadow: 0 0 0 3px rgba(55, 65, 81, 0.1);
+}
+
+/* Submit Button */
+
+.Cbttn {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 13px 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #111827;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.Cbttn:hover {
+  background-color: #000000;
+}
+
+.Cbttn:active {
+  transform: scale(0.98);
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+  .outer h2 {
+    margin-top: 35px;
+    font-size: 26px;
+  }
+
+  .inner {
+    width: calc(100% - 40px);
+    padding: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .outer h2 {
+    margin-top: 25px;
+    font-size: 23px;
+  }
+
+  .inner {
+    width: calc(100% - 30px);
+    padding: 22px 18px;
+  }
+
+  .inner textarea {
+    min-height: 180px;
+    font-size: 14px;
+  }
+
+  .Cbttn {
+    padding: 12px;
+  }
+}

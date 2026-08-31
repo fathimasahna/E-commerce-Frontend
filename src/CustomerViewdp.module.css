@@ -1,0 +1,10 @@
+.outer{
+   display: flex;
+   justify-content: center;
+   margin: 25px auto;
+}
+.table{
+    background-color: white;
+    
+    font-weight: bold;
+}

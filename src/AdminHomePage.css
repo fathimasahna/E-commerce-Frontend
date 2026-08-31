@@ -1,0 +1,602 @@
+
+/* =========================================
+   ADMIN HOME
+========================================= */
+
+.adminHome {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f5f6;
+}
+
+
+/* =========================================
+   NAVBAR
+   Navbar itself is not modified
+========================================= */
+
+.homeNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.adminHero {
+  position: relative;
+
+  min-height: calc(100vh - 70px);
+
+  background-image: url("./Assets/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   BACKGROUND OVERLAY
+========================================= */
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(247, 245, 246, 0.97) 0%,
+      rgba(247, 245, 246, 0.91) 45%,
+      rgba(247, 245, 246, 0.55) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 88%);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 80px 0;
+}
+
+
+/* =========================================
+   TEXT CONTENT
+========================================= */
+
+.heroText {
+  max-width: 680px;
+}
+
+
+/* Small heading */
+
+.heroEyebrow {
+  margin: 0 0 18px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #985e6d;
+}
+
+
+/* Main heading */
+
+.homeH1 {
+  margin: 0;
+
+  font-family:
+    "Gill Sans",
+    "Gill Sans MT",
+    Calibri,
+    "Trebuchet MS",
+    sans-serif;
+
+  font-size: clamp(46px, 5vw, 72px);
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+
+  color: #272b3d;
+}
+
+.homeH1 span {
+  display: block;
+
+  color: #985e6d;
+}
+
+
+/* Description */
+
+.homeP {
+  max-width: 590px;
+
+  margin: 30px 0 0;
+
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #272b3d;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   FEATURE ROW
+========================================= */
+
+.heroFeatures {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 38px;
+}
+
+
+.heroFeature {
+  min-width: 145px;
+
+  padding: 15px 17px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid rgba(39, 43, 61, 0.1);
+
+  border-radius: 8px;
+
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.heroFeature strong {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #985e6d;
+}
+
+
+.heroFeature span {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #272b3d;
+}
+
+
+/* =========================================
+   DECORATIVE ADMIN CARD
+========================================= */
+
+.heroCard {
+  width: 100%;
+
+  max-width: 390px;
+
+  justify-self: end;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: rgba(39, 43, 61, 0.96);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 30px 70px rgba(39, 43, 61, 0.28);
+
+  transform: rotate(2deg);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.heroCard:hover {
+  transform: rotate(0deg) translateY(-7px);
+
+  box-shadow:
+    0 35px 80px rgba(39, 43, 61, 0.34);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.cardTop {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+
+.cardTop span {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  font-weight: 700;
+
+  color: #985e6d;
+}
+
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #985e6d;
+
+  box-shadow:
+    0 0 0 5px rgba(152, 94, 109, 0.15);
+}
+
+
+/* =========================================
+   CARD DIVIDER
+========================================= */
+
+.cardLine {
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================
+   CARD STATS
+========================================= */
+
+.cardStats {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+
+.statBox {
+  min-height: 105px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+
+.statBox span {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+.statBox strong {
+  font-family:
+    "Gill Sans",
+    "Gill Sans MT",
+    Calibri,
+    sans-serif;
+
+  font-size: 20px;
+
+  color: #985e6d;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.cardFooter {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 22px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+.cardFooter span:last-child {
+  font-size: 20px;
+
+  color: #985e6d;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .heroContent {
+    width: 88%;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 65px 0;
+  }
+
+
+  .heroText {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  .heroCard {
+    justify-self: center;
+
+    transform: rotate(0deg);
+  }
+
+
+  .heroCard:hover {
+    transform: translateY(-5px);
+  }
+
+
+  .homeP {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .heroFeatures {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .adminHero {
+    min-height: calc(100vh - 60px);
+  }
+
+
+  .heroContent {
+    width: 90%;
+
+    padding: 45px 0 55px;
+
+    gap: 40px;
+  }
+
+
+  .heroEyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .homeH1 {
+    font-size: clamp(38px, 11vw, 52px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .homeP {
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .heroFeatures {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+
+    margin-top: 28px;
+  }
+
+
+  .heroFeature {
+    min-width: 0;
+
+    padding: 13px;
+  }
+
+
+  .heroFeature span {
+    font-size: 12px;
+  }
+
+
+  .heroCard {
+    max-width: 100%;
+
+    padding: 22px;
+
+    border-radius: 16px;
+  }
+
+
+  .statBox {
+    min-height: 90px;
+
+    padding: 14px;
+  }
+
+
+  .statBox strong {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .heroContent {
+    width: 92%;
+
+    padding-top: 35px;
+  }
+
+
+  .homeH1 {
+    font-size: 35px;
+  }
+
+
+  .heroFeatures {
+    grid-template-columns: 1fr;
+  }
+
+
+  .heroFeature {
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+  }
+
+
+  .heroCard {
+    padding: 18px;
+  }
+
+
+  .cardStats {
+    gap: 8px;
+  }
+
+
+  .statBox {
+    min-height: 82px;
+
+    padding: 12px;
+  }
+}
+
