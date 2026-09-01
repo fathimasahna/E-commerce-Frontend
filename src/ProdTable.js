@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ProdTable.module.css";
+import ProdNav from "./ProdNav";
 
 const ProdTable = () => {
   const [view, setView] = useState([]);
@@ -41,6 +42,7 @@ const ProdTable = () => {
   };
 
   return (
+  <><ProdNav/> 
     <div className={styles.pageContainer}>
 
       {/* Header */}
@@ -137,6 +139,7 @@ const ProdTable = () => {
       )}
 
     </div>
+  </>   
   );
 };
 

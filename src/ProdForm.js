@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
  import './ProdForm.css'
+import ProdNav from './ProdNav';
 const ProdForm = () => {
     const navigate = useNavigate(); 
     const [categories, setCategories] = useState([]);
@@ -38,6 +39,8 @@ const ProdForm = () => {
     };
 
     return (
+
+      <><ProdNav/>
         <div className='form-outer'>
             <form className='forms' onSubmit={handleSubmit}>
                 <h2 className='form-h2'>Add product</h2>
@@ -81,6 +84,7 @@ const ProdForm = () => {
                 <button type='submit'>ADD</button>
             </form>
         </div>
+     </>  
     );
 };
 
