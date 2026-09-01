@@ -13,7 +13,7 @@ const Public_login = () => {
     const password = e.target.password.value;
 
     try {
-      const response = await axios.post('https://your-backend-name.onrender.com/sample/login/', {
+      const response = await axios.post('https://e-commerce-application-fdjs.onrender.com/sample/login/', {
         username,
         password
       });
