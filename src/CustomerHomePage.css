@@ -283,7 +283,7 @@
   box-sizing: border-box;
 
   background: url('../src/Assets/main.jpg');
-    object-fit: contain;
+    object-fit: cover;
 }
 
 
