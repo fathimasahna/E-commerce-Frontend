@@ -1,16 +1,481 @@
-.public_outer {
-  background-image: url("./Assets/shop.png");
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display:flex;
-  flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* =========================
+   PAGE
+========================= */
+
+.publicPage {
+  min-height: 100vh;
+  background: #f8f6f7;
+  color: #25283d;
+  overflow-x: hidden;
 }
 
-.PublicNavbar{
-    position:sticky;
-    z-index:1000;
-    top:0;
+
+/* =========================
+   HERO
+========================= */
+
+.publicHero {
+  min-height: calc(100vh - 78px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 70px 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.heroGlow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroGlowOne {
+  width: 520px;
+  height: 520px;
+  background: #f0e5e8;
+  top: -220px;
+  right: -100px;
+}
+
+.heroGlowTwo {
+  width: 350px;
+  height: 350px;
+  background: #eeeef2;
+  bottom: -180px;
+  left: -100px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.publicHeroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.publicLabel {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #a85f72;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.publicLabel::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #a85f72;
+}
+
+
+.publicHero h1 {
+  margin: 0;
+  color: #25283d;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.publicHero h1 span {
+  display: block;
+  color: #a85f72;
+}
+
+
+.publicDescription {
+  max-width: 580px;
+  margin-top: 30px;
+  color: #718096;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.publicActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  text-decoration: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.primaryBtn {
+  background: #25283d;
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 40, 61, 0.18);
+}
+
+.primaryBtn:hover {
+  background: #a85f72;
+  transform: translateY(-3px);
+}
+
+.secondaryBtn {
+  color: #25283d;
+  border: 1px solid #d7d3d5;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.secondaryBtn:hover {
+  border-color: #a85f72;
+  color: #a85f72;
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   RIGHT VISUAL
+========================= */
+
+.publicVisual {
+  position: relative;
+  z-index: 2;
+  width: 460px;
+  min-width: 460px;
+}
+
+
+.visualMainCard {
+  background: white;
+  border-radius: 25px;
+  padding: 28px;
+  box-shadow: 0 25px 60px rgba(37, 40, 61, 0.12);
+}
+
+
+/* Top */
+
+.visualTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7a8295;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.visualDot {
+  width: 12px;
+  height: 12px;
+  background: #a85f72;
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px #f5edef;
+}
+
+
+/* =========================
+   VISUAL IMAGE
+========================= */
+
+.visualImage {
+  height: 270px;
+  margin: 25px 0;
+  border-radius: 18px;
+  background: #f3edef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageShape {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #25283d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    25px 20px 0 #a85f72,
+    -20px -15px 0 #ded9dd;
+}
+
+.imageShape span {
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+
+/* =========================
+   VISUAL BOTTOM
+========================= */
+
+.visualBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visualBottom small {
+  color: #a85f72;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.visualBottom h3 {
+  margin: 7px 0 0;
+  color: #25283d;
+  font-size: 22px;
+}
+
+
+.arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #25283d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+
+/* =========================
+   FLOATING CARD
+========================= */
+
+.floatingCard {
+  position: absolute;
+  left: -55px;
+  bottom: 35px;
+  background: white;
+  padding: 18px 22px;
+  border-radius: 13px;
+  box-shadow: 0 15px 35px rgba(37, 40, 61, 0.13);
+  display: flex;
+  flex-direction: column;
+}
+
+.floatingCard strong {
+  color: #a85f72;
+  font-size: 25px;
+}
+
+.floatingCard span {
+  color: #7a8295;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.publicFeatures {
+  position: relative;
+  z-index: 5;
+  background: white;
+  padding: 35px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  border-top: 1px solid #eee9eb;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.featureIcon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  border-radius: 12px;
+  background: #f5edef;
+  color: #a85f72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.feature h3 {
+  margin: 0;
+  color: #25283d;
+  font-size: 15px;
+}
+
+.feature p {
+  margin: 5px 0 0;
+  color: #8490a3;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+  .publicHero {
+    padding: 60px 6%;
+    gap: 40px;
+  }
+
+  .publicHero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+
+  .publicVisual {
+    width: 400px;
+    min-width: 400px;
+  }
+
+  .visualImage {
+    height: 240px;
+  }
+
+  .floatingCard {
+    left: -25px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .publicHero {
+    min-height: auto;
+    padding: 70px 7%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publicHeroContent {
+    max-width: 100%;
+  }
+
+  .publicHero h1 {
+    font-size: clamp(3rem, 11vw, 5rem);
+  }
+
+  .publicDescription {
+    font-size: 15px;
+  }
+
+  .publicVisual {
+    width: 100%;
+    min-width: 0;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  .publicFeatures {
+    grid-template-columns: 1fr;
+    padding: 35px 7%;
+  }
+
+  .floatingCard {
+    left: 15px;
+    bottom: 20px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .publicHero {
+    padding: 55px 6%;
+  }
+
+  .publicLabel {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .publicHero h1 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+  }
+
+  .publicDescription {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .publicActions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    text-align: center;
+  }
+
+  .visualMainCard {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .visualImage {
+    height: 210px;
+  }
+
+  .imageShape {
+    width: 165px;
+    height: 165px;
+  }
+
+  .imageShape span {
+    font-size: 19px;
+  }
+
+  .floatingCard {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    margin-top: 15px;
+    display: inline-flex;
+  }
 }

@@ -161,9 +161,7 @@ const PublicViewReview = () => {
 
                 </div>
 
-                <div className="reviewStars">
-                  ⭐⭐⭐⭐⭐
-                </div>
+                
 
                 <p className="publicReviewText">
                   {item.review}
