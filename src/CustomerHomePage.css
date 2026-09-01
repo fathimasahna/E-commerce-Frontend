@@ -282,12 +282,8 @@
 
   box-sizing: border-box;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(152, 94, 109, 0.8),
-      rgba(39, 43, 61, 0.95)
-    );
+  background: url('../src/Assets/main.jpg');
+    object-fit: contain;
 }
 
 
@@ -481,6 +477,7 @@
 
   .customerCardImage {
     height: 200px;
+   
   }
 
 
