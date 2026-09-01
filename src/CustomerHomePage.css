@@ -283,7 +283,9 @@
   box-sizing: border-box;
 
   background: url('../src/Assets/main.jpg');
-    object-fit: cover;
+    background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
