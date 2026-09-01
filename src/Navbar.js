@@ -95,6 +95,13 @@ const ProdNav = () => {
         >
           Complaints
         </Link>
+         <Link
+          className={styles.navLink}
+          to="/cusTable"
+          onClick={closeMenu}
+        >
+          View Customers
+        </Link>
 
         {/* Review */}
         <Link

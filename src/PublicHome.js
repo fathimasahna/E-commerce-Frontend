@@ -46,43 +46,8 @@ const PublicHome = () => {
 
         </div>
 
-        {/* Right-side visual */}
-        <div className="publicVisual">
-
-          <div className="visualMainCard">
-
-            <div className="visualTop">
-              <span>CURATED COLLECTION</span>
-              <span className="visualDot"></span>
-            </div>
-
-            <div className="visualImage">
-              <div className="imageShape">
-                <span>ELORA</span>
-              </div>
-            </div>
-
-            <div className="visualBottom">
-
-              <div>
-                <small>DISCOVER</small>
-                <h3>Something New</h3>
-              </div>
-
-              <div className="arrow">
-                →
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="floatingCard">
-            <strong>100+</strong>
-            <span>Products to explore</span>
-          </div>
-
-        </div>
+        
+        
 
       </main>
 

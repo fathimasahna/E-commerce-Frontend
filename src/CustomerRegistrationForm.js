@@ -25,7 +25,8 @@ const CustomerRegistrationForm = () => {
 
         axios.post("https://e-commerce-application-fdjs.onrender.com/sample/CustomerInsert/", customer)
             .then((res) => {
-            navigate("/cusTable");
+              alert("Form Submitted Successfully")
+            navigate("/login");
             })
             .catch((err) => console.log(err));
     };

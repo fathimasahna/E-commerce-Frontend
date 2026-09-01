@@ -47,7 +47,7 @@ const App = () => {
 
         {/* ================= ADMIN ================= */}
 
-        <Route path="/" element={<AdminHomePage />} />
+        <Route path="/" element={<PublicHome />} />
 
         <Route path="/add" element={<Add />} />
         <Route path="/view" element={<View />} />
